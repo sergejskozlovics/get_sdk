@@ -21,7 +21,7 @@ DEST_DIR=graalvm
 
 if case $OSTYPE in darwin*) true;; *) false;; esac; then
   # macOS
-  if [ $CPUTYPE == "x86_64" ]; then
+  if [ "$CPUTYPE" = "x86_64" ]; then
     SRC_URL="https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-22.1.0/graalvm-ce-java17-darwin-amd64-22.1.0.tar.gz"
   else
     SRC_URL="https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-22.1.0/graalvm-ce-java17-darwin-aarch64-22.1.0.tar.gz"

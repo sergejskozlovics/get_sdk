@@ -22,11 +22,11 @@ DEST_DIR=graalvm
 if case $OSTYPE in darwin*) true;; *) false;; esac; then
   # macOS
   if [ "$CPUTYPE" = "x86_64" ]; then
-    SRC_URL="https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-22.1.0/graalvm-ce-java17-darwin-amd64-22.1.0.tar.gz"
+    SRC_URL="https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-22.2.0/graalvm-ce-java17-darwin-amd64-22.2.0.tar.gz"
   else
-    SRC_URL="https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-22.1.0/graalvm-ce-java17-darwin-aarch64-22.1.0.tar.gz"
+    SRC_URL="https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-22.2.0/graalvm-ce-java17-darwin-aarch64-22.2.0.tar.gz"
   fi
-  PATH_PREFIX=graalvm-ce-java17-22.1.0/Contents/Home
+  PATH_PREFIX=graalvm-ce-java17-22.2.0/Contents/Home
   PATH_PREFIX_LEN=3
 else
   # not macOS
@@ -37,13 +37,13 @@ else
   if [ $OSTYPE = "linux-gnu" ]; then
     # GNU/Linux
     if [ $HOSTTYPE = "x86_64" ]; then
-      SRC_URL="https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-22.1.0/graalvm-ce-java17-linux-amd64-22.1.0.tar.gz"
+      SRC_URL="https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-22.2.0/graalvm-ce-java17-linux-amd64-22.2.0.tar.gz"
     elif [ $HOSTTYPE = "aarch64" ]; then
-      SRC_URL="https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-22.1.0/graalvm-ce-java17-linux-aarch64-22.1.0.tar.gz"
+      SRC_URL="https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-22.2.0/graalvm-ce-java17-linux-aarch64-22.2.0.tar.gz"
     else
       echo Unsupported Linux processor architecture $HOSTTYPE.
     fi
-    PATH_PREFIX=graalvm-ce-java17-22.1.0
+    PATH_PREFIX=graalvm-ce-java17-22.2.0
     PATH_PREFIX_LEN=1
   else
     echo I do not know how to install GraalVM for your OS $OSTYPE

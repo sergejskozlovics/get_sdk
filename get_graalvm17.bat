@@ -6,9 +6,9 @@
 :: licence: CC BY 4.0
 
 curl.exe -o wget.exe https://eternallybored.org/misc/wget/1.21.1/64/wget.exe
-wget.exe -O graalvm.zip https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-22.1.0/graalvm-ce-java17-windows-amd64-22.1.0.zip
+wget.exe -O graalvm.zip https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-22.2.0/graalvm-ce-java17-windows-amd64-22.2.0.zip
 powershell.exe -NoP -NonI -Command "Expand-Archive '.\graalvm.zip' '.'"
 del .wget-hsts
 del wget.exe
 del graalvm.zip
-ren graalvm-ce-java17-22.1.0 graalvm
+ren graalvm-ce-java17-22.2.0 graalvm
